@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ICS iChangsha | 长沙展览旅行指南</title>
+    <meta
+      name="description"
+      content="ICS iChangsha 为来到长沙的旅客整理博物馆、美术馆、艺术空间、研学活动与城市展览资讯。"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260518-cleanhero1" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="ICS iChangsha 首页">
+        <span class="brand-mark">ICS</span>
+        <span>
+          <strong>iChangsha</strong>
+          <small>展览旅行指南</small>
+        </span>
+      </a>
+      <label class="header-search">
+        <input id="headerSearchInput" type="search" placeholder="搜索长沙展览、场馆、路线" />
+        <span class="svg-icon search-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m16.2 16.2 4.3 4.3"></path></svg>
+        </span>
+      </label>
+      <nav class="top-nav" aria-label="主导航">
+        <a href="#today"><span class="svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>今日</a>
+        <a href="#explore"><span class="svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"></rect><rect x="14" y="4" width="6" height="6"></rect><rect x="4" y="14" width="6" height="6"></rect><rect x="14" y="14" width="6" height="6"></rect></svg></span>浏览</a>
+        <a href="#calendar"><span class="svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M8 3v4M16 3v4M4 10h16"></path></svg></span>日历</a>
+        <a href="#map"><span class="svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3-6-3Z"></path><path d="M9 3v15M15 6v15"></path></svg></span>地图</a>
+        <a href="#saved"><span class="svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.5 8.8c0 5.2-8.5 10.2-8.5 10.2S3.5 14 3.5 8.8A4.4 4.4 0 0 1 12 7.1a4.4 4.4 0 0 1 8.5 1.7Z"></path></svg></span>收藏</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media">
+          <img
+            src="./assets/ics-hero-clean.png"
+            alt="ICS iChangsha 艺术策展风格视觉"
+          />
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">Changsha Exhibition Guide</p>
+          <h1 id="hero-title">ICS iChangsha</h1>
+          <p>
+            用一张清爽的城市展览清单，连接湖南博物院、岳麓山下的艺术空间、湘江两岸的美术馆与适合旅客顺路体验的研学活动。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#explore">开始查展</a>
+            <a class="button ghost" href="#calendar">看本周安排</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="今日摘要">
+          <span>今天可看</span>
+          <strong id="heroOpenCount">0</strong>
+          <small>含常设、临展与研学体验</small>
+          <a href="#today">查看全部 <span class="svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></svg></span></a>
+        </aside>
+      </section>
+
+      <section class="curation-strip" aria-label="策展式导览重点">
+        <article>
+          <i class="svg-icon feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 17h12M7 9v8M12 9v8M17 9v8M5 9h14l-7-5-7 5Z"></path></svg></i>
+          <span>01</span>
+          <strong>文博线索</strong>
+          <p>从马王堆、岳麓书院到城市史展，用展览理解长沙。</p>
+        </article>
+        <article>
+          <i class="svg-icon feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="16" rx="2"></rect><path d="M8 15l3-3 2 2 3-4 2 5M8 8h4"></path></svg></i>
+          <span>02</span>
+          <strong>艺术空间</strong>
+          <p>连接湘江两岸的美术馆、影像馆与青年艺术区。</p>
+        </article>
+        <article>
+          <i class="svg-icon feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg></i>
+          <span>03</span>
+          <strong>旅行动线</strong>
+          <p>按区域、时间和路线，把展览自然放进一天行程里。</p>
+        </article>
+      </section>
+
+      <section class="quick-strip" aria-label="快捷入口">
+        <button class="quick-filter active" data-quick="all">全部</button>
+        <button class="quick-filter" data-quick="博物馆">博物馆</button>
+        <button class="quick-filter" data-quick="美术馆">美术馆</button>
+        <button class="quick-filter" data-quick="艺术空间">艺术空间</button>
+        <button class="quick-filter" data-quick="研学">研学</button>
+        <button class="quick-filter" data-quick="免费">免费</button>
+      </section>
+
+      <section class="section" id="today">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Open Today</p>
+            <h2>今日可看</h2>
+          </div>
+          <p>按当前日期自动筛出正在开放的展览，适合旅途中临时决定去哪。</p>
+        </div>
+        <div class="feature-grid" id="todayGrid"></div>
+      </section>
+
+      <section class="section soft" id="explore">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Browse</p>
+            <h2>展览浏览</h2>
+          </div>
+          <p>用日期、区域、类型和票价筛选；第一版数据为公开资料整理的静态演示数据。</p>
+        </div>
+
+        <div class="toolbar" aria-label="展览筛选工具">
+          <label class="search-field">
+            <span>搜索</span>
+            <input id="searchInput" type="search" placeholder="展览、场馆、区域、关键词" />
+          </label>
+          <label>
+            <span>日期</span>
+            <input id="dateInput" type="date" />
+          </label>
+          <label>
+            <span>区域</span>
+            <select id="districtSelect"></select>
+          </label>
+          <label>
+            <span>类型</span>
+            <select id="typeSelect"></select>
+          </label>
+          <label>
+            <span>票价</span>
+            <select id="priceSelect">
+              <option value="all">全部</option>
+              <option value="free">免费/免票预约</option>
+              <option value="paid">收费</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="view-tabs" role="tablist" aria-label="浏览方式">
+          <button class="tab-button active" data-view="cards">卡片</button>
+          <button class="tab-button" data-view="list">列表</button>
+        </div>
+        <div class="cards-grid" id="exhibitionGrid"></div>
+      </section>
+
+      <section class="section split" id="calendar">
+        <div>
+          <p class="eyebrow">Calendar</p>
+          <h2>本周日历</h2>
+          <p class="section-note">按天查看可安排的展览，适合把橘子洲、岳麓书院和展馆路线串起来。</p>
+        </div>
+        <div class="calendar" id="calendarGrid" aria-label="未来七天展览日历"></div>
+      </section>
+
+      <section class="section map-section" id="map">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Map</p>
+            <h2>城市地图</h2>
+          </div>
+          <p>静态版先用坐标和交通提示展示空间关系，后续可接入高德或腾讯地图。</p>
+        </div>
+        <div class="map-layout">
+          <div class="map-canvas" id="mapCanvas" aria-label="长沙展览地图"></div>
+          <div class="route-list" id="routeList"></div>
+        </div>
+      </section>
+
+      <section class="section" id="saved">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Saved</p>
+            <h2>我的收藏</h2>
+          </div>
+          <p>无需登录，收藏会保存在当前浏览器里。</p>
+        </div>
+        <div class="cards-grid" id="savedGrid"></div>
+      </section>
+
+      <section class="section source-section">
+        <div>
+          <p class="eyebrow">Data Notes</p>
+          <h2>数据说明</h2>
+        </div>
+        <p>
+          第一版采用静态数据，信息参考湖南博物院、长沙博物馆、湖南省文旅厅、媒体报道和场馆公开介绍；开放时间、票价和展期以各场馆最新公告为准。
+        </p>
+      </section>
+    </main>
+
+    <dialog id="detailDialog" class="detail-dialog" aria-labelledby="dialogTitle">
+      <button class="icon-close" id="closeDialog" aria-label="关闭详情">×</button>
+      <div id="dialogContent"></div>
+    </dialog>
+
+    <template id="cardTemplate">
+      <article class="ex-card">
+        <div class="card-image"><span class="type-badge"></span><img alt="" /></div>
+        <div class="card-body">
+          <div class="card-meta"></div>
+          <h3></h3>
+          <p class="summary"></p>
+          <div class="tags"></div>
+          <div class="card-footer">
+            <button class="button small detail-button">详情</button>
+            <button class="save-button" aria-label="收藏展览"></button>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./app.js?v=20260518-icons1"></script>
+  </body>
+</html>
