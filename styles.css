@@ -2084,6 +2084,8 @@ body {
 }
 
 .site-header {
+  position: static !important;
+  top: auto !important;
   display: grid !important;
   grid-template-columns: 250px minmax(360px, 560px) minmax(420px, 1fr) !important;
   align-items: center !important;
@@ -2638,6 +2640,8 @@ main {
 
   /* ── Compact Header ── */
   .site-header {
+    position: static !important;
+    top: auto !important;
     display: flex !important;
     align-items: center !important;
     gap: 0 !important;
