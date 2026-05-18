@@ -484,6 +484,44 @@ function bindEvents() {
     });
   });
   els.closeDialog.addEventListener("click", () => els.dialog.close());
+
+  // ── Mobile: search toggle ──
+  const mobileSearchToggle = document.querySelector("#mobileSearchToggle");
+  const headerSearch = document.querySelector("#headerSearch");
+  if (mobileSearchToggle && headerSearch) {
+    mobileSearchToggle.addEventListener("click", () => {
+      headerSearch.classList.toggle("mobile-visible");
+      if (headerSearch.classList.contains("mobile-visible")) {
+        headerSearch.querySelector("input").focus();
+      }
+    });
+    // Hide search panel on scroll
+    document.addEventListener("scroll", () => {
+      headerSearch.classList.remove("mobile-visible");
+    }, { passive: true });
+  }
+
+  // ── Mobile: bottom nav active section ──
+  const sections = document.querySelectorAll("section[id]");
+  const navItems = document.querySelectorAll(".bottom-nav-item");
+  if (sections.length && navItems.length) {
+    const observer = new IntersectionObserver((entries) => {
+      let best = null;
+      let bestRatio = 0;
+      entries.forEach((entry) => {
+        if (entry.intersectionRatio > bestRatio) {
+          best = entry.target.id;
+          bestRatio = entry.intersectionRatio;
+        }
+      });
+      if (best) {
+        navItems.forEach((item) => {
+          item.classList.toggle("active", item.dataset.section === best);
+        });
+      }
+    }, { threshold: [0, 0.25, 0.5, 0.75, 1] });
+    sections.forEach((section) => observer.observe(section));
+  }
 }
 
 renderOptions();

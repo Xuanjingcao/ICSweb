@@ -8,7 +8,7 @@
       name="description"
       content="ICS iChangsha 为来到长沙的旅客整理博物馆、美术馆、艺术空间、研学活动与城市展览资讯。"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260518-cleanhero1" />
+    <link rel="stylesheet" href="./styles.css?v=20260518-mobile1" />
   </head>
   <body>
     <header class="site-header">
@@ -19,12 +19,15 @@
           <small>展览旅行指南</small>
         </span>
       </a>
-      <label class="header-search">
+      <label class="header-search" id="headerSearch">
         <input id="headerSearchInput" type="search" placeholder="搜索长沙展览、场馆、路线" />
         <span class="svg-icon search-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m16.2 16.2 4.3 4.3"></path></svg>
         </span>
       </label>
+      <button class="mobile-search-toggle" id="mobileSearchToggle" aria-label="搜索">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.2 16.2 4.3 4.3"></path></svg>
+      </button>
       <nav class="top-nav" aria-label="主导航">
         <a href="#today"><span class="svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>今日</a>
         <a href="#explore"><span class="svg-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"></rect><rect x="14" y="4" width="6" height="6"></rect><rect x="4" y="14" width="6" height="6"></rect><rect x="14" y="14" width="6" height="6"></rect></svg></span>浏览</a>
@@ -190,6 +193,29 @@
       </section>
     </main>
 
+    <nav class="mobile-bottom-nav" id="mobileBottomNav" aria-label="移动端导航">
+      <a href="#today" class="bottom-nav-item" data-section="today">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+        <span>今日</span>
+      </a>
+      <a href="#explore" class="bottom-nav-item" data-section="explore">
+        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"></rect><rect x="14" y="4" width="6" height="6"></rect><rect x="4" y="14" width="6" height="6"></rect><rect x="14" y="14" width="6" height="6"></rect></svg>
+        <span>浏览</span>
+      </a>
+      <a href="#calendar" class="bottom-nav-item" data-section="calendar">
+        <svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"></rect><path d="M8 3v4M16 3v4M4 10h16"></path></svg>
+        <span>日历</span>
+      </a>
+      <a href="#map" class="bottom-nav-item" data-section="map">
+        <svg viewBox="0 0 24 24"><path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3-6-3Z"></path><path d="M9 3v15M15 6v15"></path></svg>
+        <span>地图</span>
+      </a>
+      <a href="#saved" class="bottom-nav-item" data-section="saved">
+        <svg viewBox="0 0 24 24"><path d="M20.5 8.8c0 5.2-8.5 10.2-8.5 10.2S3.5 14 3.5 8.8A4.4 4.4 0 0 1 12 7.1a4.4 4.4 0 0 1 8.5 1.7Z"></path></svg>
+        <span>收藏</span>
+      </a>
+    </nav>
+
     <dialog id="detailDialog" class="detail-dialog" aria-labelledby="dialogTitle">
       <button class="icon-close" id="closeDialog" aria-label="关闭详情">×</button>
       <div id="dialogContent"></div>
@@ -211,6 +237,6 @@
       </article>
     </template>
 
-    <script src="./app.js?v=20260518-icons1"></script>
+    <script src="./app.js?v=20260518-mobile1"></script>
   </body>
 </html>
