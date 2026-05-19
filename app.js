@@ -1,4 +1,4 @@
-const today = new Date("2026-05-19T09:00:00+08:00");
+const today = new Date();
 
 const exhibitions = [
   {
@@ -767,7 +767,9 @@ function bindEvents() {
       renderAll();
     });
   });
-  els.closeDialog.addEventListener("click", () => els.dialog.close());
+  els.closeDialog.addEventListener("click", () => {
+    if (els.dialog.open) els.dialog.close();
+  });
 
   // ── Mobile: search toggle ──
   const mobileSearchToggle = document.querySelector("#mobileSearchToggle");
